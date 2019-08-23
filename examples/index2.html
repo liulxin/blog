@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>div水平居中和垂直居中</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      background: pink;
+      height: 100px;
+    }
+
+    .child {
+      background: green;
+    }
+
+    /* 1. 子元素宽高固定 */
+    /* .parent{
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .child{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      margin-top: -25px;
+      margin-left: -25px;
+    } */
+
+    /* 2. 子元素宽高固定 */
+    /* .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      transform: translate(-50%, -50%)
+    } */
+
+    /* 3. 子元素宽高固定 */
+    /* .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+    } */
+
+    /* 4. 子元素宽高不固定 */
+    /* .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    } */
+
+    /* 5. 子元素宽高不固定 */
+    .parent{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">
+      this is child
+    </div>
+  </div>
+</body>
+
+</html>

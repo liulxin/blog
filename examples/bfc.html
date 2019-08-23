@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BFC--块格式化上下文</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      background-color: rgb(224, 206, 247);
+      border: 5px solid rebeccapurple;
+      overflow: hidden;
+    }
+
+    .fl {
+      float: left;
+      width: 200px;
+      height: 100px;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    /* .box p{
+      overflow: auto;
+    } */
+
+    .blue,
+    .red-inner {
+      height: 50px;
+      margin: 10px 0;
+    }
+
+    .blue {
+      background: blue;
+    }
+
+    .red-inner {
+      background: red;
+    }
+
+    .red-outer {
+      overflow: hidden;
+    }
+
+    .aside {
+      width: 100px;
+      height: 150px;
+      float: left;
+      background: #f66;
+    }
+
+    .text {
+      height: 200px;
+      background: #fcc;
+    }
+
+    .main {
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="fl">i am a floated box</div>
+    <p><span>i am content inside the container</span></p>
+  </div>
+
+
+  <div class="blue"></div>
+  <div class="red-outer">
+    <div class="red-inner">red inner</div>
+  </div>
+
+  <div class="wrap">
+    <div class="aside"></div>
+    <div class="main">
+      <div class="text"></div>
+    </div>
+  </div>
+</body>
+
+</html>

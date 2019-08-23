@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>左侧固定 右侧自适应--两栏布局</title>
+  <style>
+    .outer {
+      height: 60px;
+    }
+
+    .sidebar,
+    .content {
+      height: 100%;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: red;
+    }
+
+    .content {
+      background: green;
+    }
+    /* 1. 利用BFC与浮动元素不重叠*/
+    /* .sidebar{
+      float: left;
+    }
+    .content{
+      overflow: hidden; //bfc
+    } */
+
+    /* 2. 利用浮动和margin*/
+    /* .sidebar{
+      float: left;
+    }
+    .content{
+      margin-left: 200px;
+    } */
+
+    /* 3. 定位和margin*/
+    /* .outer{
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .sidebar{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .content{
+      margin-left: 200px;
+    } */
+
+    /* 4. */
+    /* .sidebar{
+      float: left;
+    }
+    .content{
+      float: left;
+      width: calc(100% - 200px);
+    } */
+
+    /* 5 */
+    /* .outer{
+      font-size: 0;
+    }
+    .sidebar{
+      display: inline-block;
+      font-size: 16px;
+    }
+    .content{
+      display: inline-block;
+      width: calc(100% - 200px);
+      font-size: 16px;
+    } */
+
+    .outer{
+      display: flex;
+    }
+    .content{
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="sidebar">固定宽度区(sideBar)</div>
+    <div class="content">自适应区(content)</div>
+  </div>
+</body>
+
+</html>
