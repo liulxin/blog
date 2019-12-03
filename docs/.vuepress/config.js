@@ -1,7 +1,7 @@
 module.exports = {
   title: "liulxin",
   description: "code learning",
-  base: '/learn-knowledge/',
+  base: '/web/',
   themeConfig: {
     sidebar: "auto",
     repo: "https://github.com/liulxin",
