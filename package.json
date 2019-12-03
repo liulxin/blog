@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/dongwudi/blog#readme",
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0",
     "vuepress": "^1.2.0"
   }
 }

@@ -1,6 +1,7 @@
 module.exports = {
   title: "liulxin",
   description: "code learning",
+  base: '/learn-knowledge/',
   themeConfig: {
     sidebar: "auto",
     repo: "https://github.com/liulxin",
@@ -19,5 +20,6 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  plugins: ['@vuepress/back-to-top','@vuepress/active-header-links','@vuepress/nprogress']
 };
